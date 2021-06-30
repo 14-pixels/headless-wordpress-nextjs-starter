@@ -48,13 +48,22 @@ perl -i -pe'
   s/put your unique phrase here/salt()/ge
 ' wp-config.php
 
-#download headless theme
-echo "Download starter theme..."
-rm -rf wp-content
-git clone https://github.com/WebDevStudios/wds-headless-wordpress.git wp-content
 echo "Cleaning..."
 #remove zip file
 rm latest.tar.gz
+#download headless theme
+echo "Download starter theme..."
+rm -rf wp-content
+git clone https://github.com/14-pixels/headless-wordpress.git wp-content
+echo "Install Plugins..."
+cd wp-content
+composer self-update --1 && COMPOSER=composer-public.json composer install
+echo "Download frontend starter..."
+cd ..
+cd ..
+git clone git@github.com:WebDevStudios/nextjs-wordpress-starter.git frontend
+cd frontend
+npm i --legacy-peer-deps
 #remove bash script
 cd ..
 rm wp.sh
