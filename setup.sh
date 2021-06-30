@@ -1,5 +1,7 @@
 #!/bin/bash -e
 clear
+mkdir wordpress
+cd wordpress
 echo "============================================"
 echo "WordPress Install Script"
 echo "============================================"
@@ -54,6 +56,7 @@ echo "Cleaning..."
 #remove zip file
 rm latest.tar.gz
 #remove bash script
+cd ..
 rm wp.sh
 echo "========================="
 echo "Installation is complete."
