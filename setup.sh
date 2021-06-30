@@ -66,7 +66,7 @@ cd frontend
 npm i --legacy-peer-deps
 #remove bash script
 cd ..
-rm wp.sh
+rm setup.sh
 echo "========================="
 echo "Installation is complete."
 echo "========================="
