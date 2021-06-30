@@ -61,7 +61,7 @@ composer self-update --1 && COMPOSER=composer-public.json composer install
 echo "Download frontend starter..."
 cd ..
 cd ..
-git clone git@github.com:WebDevStudios/nextjs-wordpress-starter.git frontend
+git clone https://github.com/14-pixels/nextjs-wordpress-starter.git frontend
 cd frontend
 npm i --legacy-peer-deps
 #remove bash script
